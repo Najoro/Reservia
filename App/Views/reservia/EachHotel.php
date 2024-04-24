@@ -28,7 +28,7 @@
     </div>
     </a>
 </article>
-<article id="reservation" class="reservationContenaire">
+<!-- <article id="reservation" class="reservationContenaire">
     <h2 class="resercationTitle">Reservation</h2>
     <form class="reservationContenue" >
         <div class="dateContenaire">
@@ -43,4 +43,4 @@
            <input type="submit" value="Envoyer">
         </div>
     </form>
-</article>
+</article> -->
