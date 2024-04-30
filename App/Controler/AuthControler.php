@@ -48,9 +48,13 @@ class AuthControler {
         header("Location:.?controler=Auth&action=user");
         return new View('Auth/user.php', ['user' =>  $_SESSION['user'][0]]);
     }
+
+
     public static function user() {
         return new View('Auth/user.php', ['user' => $_SESSION['user'][0]]);
     }
+
+    
     public static function logout(){
         unset($_SESSION['user']);
         header("Location:.?controler=Auth&action=login");

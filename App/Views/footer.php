@@ -1,6 +1,6 @@
 </main>
     <!-- FOOTER -->
-    <footer>
+    <footer class="footerContenaire">
       <div class="footerContenuer">
         <div class="EachColomn">
           <h3 class="Title">A propos</h3>
@@ -21,8 +21,9 @@
       </div>
     </footer>
     <!-- FOOTER -->
-
   <script src="./dist/js/all.js"></script>
   <script src="./Www/dist/js/all.min.js"></script>
+  <script src="./dist/js/index.js"></script>
+  <!-- <script src="./dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>

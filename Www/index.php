@@ -2,7 +2,6 @@
 
 use App\Controler\ReserviaControler;
 use Kernel\Connexion;
-
 //demarer le session 
 if(session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -29,4 +28,4 @@ $action->display();
 //footer
 include("../App/Views/footer.php");
 
-// var_dump($_SESSION);
+var_dump($_SESSION['user'][0]['id']);

@@ -20,13 +20,64 @@
                 <h6>Telephone </h6>
                 <p>: <?= $user['tel'] ?></p>
             </div>
-            <a class="logOut" href="?controler=Auth&action=logOut">deconnecter</a>
+            <a class="btn btn-warning" href="?controler=Auth&action=logOut">deconnecter</a>
         </div>
     </div>
     <div class="listeReservationContenaire">
         <h1 class="usserSpaceConteniareTitle">Mes Reservation</h1>
         <div class="listeReservationContenue">
-            <h1>Liste de tous les reservations</h1>
+            <div class="listAllReservevationContenaire">
+                <table class="table table-striped"">
+                    <thead>
+                        <tr>
+                        <th scope="col">nom Hotel</th>
+                        <th scope="col">1erJour</th>
+                        <th scope="col">dernier Jours</th>
+                        <th scope="col">Nombre de jours</th>
+                        <th scope="col">prix totals</th>
+                        <th scope="col">Btm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reservation liste</td>
+                            <td>DateIn</td>
+                            <td>DateOut</td>
+                            <td>Stay jours</td>
+                            <td>Prix totals</td>
+                            <td>
+                                <button class="btn btn-primary mx-2"><i class="fa-solid fa-eye"></i></button>
+                                <button class="btn btn-danger mx-2"><i class="fa-solid fa-trash"></i> </button>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td>Reservation liste</td>
+                            <td>DateIn</td>
+                            <td>DateOut</td>
+                            <td>Stay jours</td>
+                            <td>Prix totals</td>
+                            <td>
+                                <button class="btn btn-primary mx-2"><i class="fa-solid fa-eye"></i></button>
+                                <button class="btn btn-danger mx-2"><i class="fa-solid fa-trash"></i> </button>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td>Reservation liste</td>
+                            <td>DateIn</td>
+                            <td>DateOut</td>
+                            <td>Stay jours</td>
+                            <td>Prix totals</td>
+                            <td>
+                                <button class="btn btn-primary mx-2"><i class="fa-solid fa-eye"></i></button>
+                                <button class="btn btn-danger mx-2"><i class="fa-solid fa-trash"></i> </button>
+                            </td>
+                        </tr>                  
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
+<?php
+var_dump($_POST)
+?>

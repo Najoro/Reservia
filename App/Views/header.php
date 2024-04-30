@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./dist/css/all.css">
   <link rel="stylesheet" href="./dist/css/all.min.css">
   <link rel="stylesheet" href="./dist/css/index.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
 </head>
 
 <body>

@@ -1,20 +1,17 @@
-const supprimer = document.querySelector('.supprimer');
-const popup = document.querySelector('.popup');
-const crois = document.querySelector('.crois');
-const accepte = document.querySelector('.accepte');
-const contenaire = document.querySelector('.container');
+const goReserver = document.getElementById('goReserve');
+const reserver = document.querySelector('.reservation');
+const backReserver = document.querySelector('.back');
+const hostingEachCard = document.querySelector('.hostingEachCard');
+const footer = document.querySelector('.footerContenaire');
 
-supprimer.addEventListener("click" , ()=> {
-    popup.classList.add('active-popup');
-    contenaire.classList.add('flou');
+
+goReserver.addEventListener('click' , ()=> {
+    reserver.classList.toggle('active-popup');
+    hostingEachCard.classList.toggle("flou");
+    footer.classList.toggle("flou");
 })
-
-crois.addEventListener('click', ()=> {
-    popup.classList.remove('active-popup');
-    contenaire.classList.remove('flou');
-})
-
-accepte.addEventListener('click', ()=> {
-    popup.classList.remove('active-popup');
-    contenaire.classList.remove('flou');
+backReserver.addEventListener('click', ()=> {
+    reserver.classList.toggle('active-popup');
+    hostingEachCard.classList.toggle("flou");
+    footer.classList.toggle("flou");
 })

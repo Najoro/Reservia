@@ -1,4 +1,9 @@
 <article class="hostingEachCard">
+    <div class="directionFleche">
+        <a href="<?=$_SERVER['HTTP_REFERER']?>">
+            <i class="fas fa-arrow-left "></i>
+        </a>
+    </div>
     <div class="hostingEachImage">
         <img class="hostingEachCardFigureImg" src="./dist/images/images/hebergements/4_small/<?= $hotel['label_image'] ?>" alt="Chambre avec un lit superposé avec une fenêtre vu sur la ville." />
     </div>
@@ -22,25 +27,51 @@
         </p>
         <p class="hostingEachDesc"><?= $hotel['description'] ?></p>
         <div class="hostingEachBtmContenaire">
-            <a href="?controler=Reservia&action=index" class="hostingEachBtm hostinEachBack"> <i class="fa-solid fa-house"></i> Aceuil</a>
-            <a href="?controler=Auth&action=login" class="hostingEachBtm hostinEachReserve"><i class="fas fa-shopping-bag"></i> Reserver</a>
+            <a href="?controler=Reservia&action=index" class="hostingEachBtm hostinEachHeart"> 
+                <i class="far fa-heart"></i>
+            </a>
+            <a href="#reservation" id="goReserve" class="hostingEachBtm hostinEachReserve">
+                <div class="icone">
+                    <i class="fas fa-shopping-bag"></i> 
+                </div>
+                <h5>Reserver</h5>
+            </a>
         </div>
     </div>
     </a>
 </article>
-<!-- <article id="reservation" class="reservationContenaire">
+<article class="reservationContenaire reservation">
+    <div class="directionFleche back">
+        <a href="#">
+            <i class="fas fa-arrow-left "></i>
+        </a>
+    </div>
     <h2 class="resercationTitle">Reservation</h2>
-    <form class="reservationContenue" >
+    <form class="reservationContenue" action=".?controler=Auth&action=user" method="post" >
         <div class="dateContenaire">
             <label for="debutSession">Debut</label>
-            <input type="date" name="debutSession" id="debutSession">
+            <input type="date" class="inputDate" name="debutSession" id="debutSession">
         </div>
         <div class="dateContenaire">
             <label for="finSession">Fin</label>
-            <input type="date" name="finSession" id="finSession">
+            <input type="date" class="inputDate" name="finSession" id="finSession">
+        </div>
+        <div class="dateContenaire">
+            <label for="jours">
+                Nombre du Sejours : 
+                <input type="text" class="inputNone" name="jours" id="jours" value="0"disabled= "disabled">
+                Jours
+            </label>  
+        </div>
+        <div class="dateContenaire">
+            <label for="prix_total">
+                Prix Totale : 
+                <input type="text"  class="inputNone" name="prix_total" id="prix_total" value="0" disabled= "disabled">
+                Kar
+            </label>
         </div>
         <div class="buttonReservation">
-           <input type="submit" value="Envoyer">
+            <button class="btn btn-primary" type="submit">Emvoyer</button>
         </div>
     </form>
-</article> -->
+</article>

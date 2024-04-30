@@ -1,0 +1,3 @@
+bd name = Bd users = reservia
+
+mdp = j0tp)4w/WDfRRq8W

@@ -30,12 +30,17 @@ body {
   font-family: "r", "Sans serif";
   margin: 0;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.flou{
+  opacity: 0.2;
 }
-
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+h3{
+  font-size: 1.3rem !important;
+  font-weight: bold;
+}
 .header {
   display: grid;
   align-items: center;
@@ -428,6 +433,19 @@ a {
   align-items: center;
   flex-wrap: wrap;
   margin: 2rem 0;
+  position:relative;
+}
+.directionFleche{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.directionFleche a{
+  width: 200px;
+  width: 10px;
+}
+.directionFleche a i{
+  width: 100px;
 }
 .hostingEachImage{
   width: 500px;
@@ -481,17 +499,18 @@ a {
 }
 .hostingEachBtmContenaire{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
-  
 }
 .hostingEachBtm{
-  padding: 10px 2.5rem;
+  height:inherit;
+  padding: 1rem;
   margin: 10px 5px;
-  color: var(--white);
   border-radius: 5px;
   font-family: 'rb';
   transition: 0.2s ease-in-out;
+  border: 1px solid var(--color6);
+
 }
 
 .hostingEachBtm:hover{
@@ -500,12 +519,99 @@ a {
 .hostingEachBtm:active{
   transform: scale(0.9);
 }
-.hostinEachBack{
-  background: var(--color1);
+.hostinEachHeart{
+  background: var(--white);
+  font-size: 1.5rem;
 }
 .hostinEachReserve{
+  height: 60px;
+  padding: 0 1rem !important ;
   background:var(--color6);
+  color: var(--white) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.hostinEachReserve h5{
+  margin-left: 10px;
+}
+.hostinEachReserve .icone {
+  font-size: 1.5rem;
+}
+/*reserver*/
+.reservation{
+  height: 70vh;
+  width: 400px;
+  border: 1px solid var(--color1);
+  border-radius: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50% , -50%);
+  background: #e3d4d4;
+  padding: 1rem;
+  display: none;
+  grid-template-rows: 15% auto;
+  opacity: 1 !important;
+  grid-template-areas: 
+  "A"
+   "B";
+}
+.active-popup{
+  display: grid !important;
+}
+.resercationTitle{
+  grid-area: A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color1);
+  text-decoration: underline;
+
+}
+.reservationContenue{
+  grid-area: B;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.dateContenaire{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dateContenaire label {
+  font-weight: bold;
+}
+.inputDate {
+  padding: 10px 1rem;
+  background: none;
+  color: var(--color6);
+  font-size: 1rem;
+  border: 2px solid var(--color6);
+  border-radius: 10px;
+  margin: 10px;
+}
+.inputNone{
+  border: none;
+  width: 40px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.buttonReservation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .reservationDate{
+
+} */
 /*end each hosting*/
 @media (max-width: 1440px) {
   .hosting {
@@ -822,7 +928,7 @@ footer .footerContenuer .Link {
 }
 .userSpaceContenaire{
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 35% auto;
   grid-template-areas: "A B";
   background: var(--color4);
   margin: 1rem 0;
